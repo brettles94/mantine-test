@@ -7,6 +7,8 @@ const nextConfig = {
    */
   output: "export",
 
+  distDir: "docs",
+
   /**
    * Set base path. This is the slug of your GitHub repository.
    *
