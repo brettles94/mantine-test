@@ -1,0 +1,42 @@
+{
+    "en": {
+      "translation": {
+        "TITLE": "OnlyCats",
+        "MENUS": {
+          "CHARTS": "Charts",
+          "PAYMENTS": "Payments"
+        },
+        "CHARTS": {
+          "HEADER": "Followers",
+          "POPULAR": "Popular Posts",
+          "LABELS": {
+            "FOLLOWERS": "Followers"
+          }
+        },
+        "LANGUAGES": {
+          "ENGLISH": "English",
+          "JAPANESE": "Japanese"
+        }
+      }
+    },
+    "jp": {
+      "translation": {
+        "TITLE": "猫のみ",
+        "MENUS": {
+          "CHARTS": "チャート",
+          "PAYMENTS": "支払い"
+        },
+        "CHARTS": {
+          "HEADER": "フォロワー",
+          "POPULAR": "人気の投稿",
+          "LABELS": {
+            "FOLLOWERS": "フォロワー"
+          }
+        },
+        "LANGUAGES": {
+          "ENGLISH": "英語",
+          "JAPANESE": "日本語"
+        }
+      }
+    }
+  }

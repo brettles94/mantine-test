@@ -1,23 +1,59 @@
-import { Title, Text, Anchor } from '@mantine/core';
-import classes from './Welcome.module.css';
+import { AppShell, Burger, Stack, Title } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import { useTranslation } from 'react-i18next';
+import { LineChart } from '@mantine/charts';
+import { data } from './data';
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
+import { Navbar } from '../Navbar/Navbar';
+import { PopularPosts } from '../Popular/Popular';
 
 export function Welcome() {
+  const [opened, { toggle }] = useDisclosure();
+  const { t } = useTranslation();
+
   return (
-    <>
-      <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
-        </Text>
-      </Title>
-      <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit index.tsx file.
-      </Text>
-    </>
+    <AppShell
+      header={{ height: 70 }}
+      navbar={{
+        width: 200,
+        breakpoint: 'sm',
+        collapsed: { mobile: !opened },
+      }}
+      padding="md"
+    >
+      <AppShell.Header>
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+        <Title order={1} c="blue.4" p="xs">
+          {t('TITLE')}
+        </Title>
+      </AppShell.Header>
+
+      <Navbar />
+
+      <AppShell.Main>
+        <Stack gap="lg">
+          <Stack>
+            <Title order={2}>{t('CHARTS.POPULAR')}</Title>
+            <PopularPosts />
+          </Stack>
+
+          <Stack>
+            <Title order={2}>{t('CHARTS.HEADER')}</Title>
+            <LineChart
+              h={300}
+              mt={24}
+              data={data}
+              dataKey="date"
+              series={[
+                { name: 'followers', color: 'indigo.6', label: t('CHARTS.LABELS.FOLLOWERS') },
+              ]}
+              curveType="linear"
+            />
+          </Stack>
+        </Stack>
+      </AppShell.Main>
+
+      <LanguageSwitcher />
+    </AppShell>
   );
 }
