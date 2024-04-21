@@ -1,0 +1,30 @@
+{
+    "TITLE": "猫のみ",
+    "MENUS": {
+    "CHARTS": "チャート",
+    "PAYMENTS": "支払い"
+    },
+    "CHARTS": {
+    "HEADER": "フォロワー",
+    "POPULAR": "人気の投稿",
+    "LABELS": {
+        "FOLLOWERS": "フォロワー"
+    }
+    },
+    "LANGUAGES": {
+    "ENGLISH": "英語",
+    "JAPANESE": "日本語"
+    },
+    "PAYMENTS": {
+    "HEADER": "支払い",
+    "LABELS": {
+        "AMOUNT": "額",
+        "DATE": "期",
+        "TRANSFER_TYPE": "トランザクションの種類",
+        "TYPE": {
+        "AUTOMATIC": "自動トランザクション",
+        "MANUAL": "手動トランザクション"
+        }
+    }
+}
+}

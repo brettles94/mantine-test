@@ -1,0 +1,30 @@
+{
+    "TITLE": "OnlyCats",
+    "MENUS": {
+      "CHARTS": "Charts",
+      "PAYMENTS": "Payments"
+    },
+    "CHARTS": {
+      "HEADER": "Followers",
+      "POPULAR": "Popular Posts",
+      "LABELS": {
+        "FOLLOWERS": "Followers"
+      }
+    },
+    "PAYMENTS": {
+      "HEADER": "Payments",
+      "LABELS": {
+        "AMOUNT": "Amount",
+        "DATE": "Date",
+        "TRANSFER_TYPE": "Transfer Type",
+        "TYPE": {
+          "AUTOMATIC": "Automatic",
+          "MANUAL": "Manual"
+        }
+      }
+    },
+    "LANGUAGES": {
+      "ENGLISH": "English",
+      "JAPANESE": "Japanese"
+    }
+  }
